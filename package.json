@@ -19,5 +19,9 @@
   "files": [
     "src",
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "emotion": "^10.0.27",
+    "rollup-plugin-commonjs": "^10.1.0"
+  }
 }
