@@ -2,11 +2,11 @@
   import { css } from 'emotion';
   import { theme } from '../../util/theme';
 
-
-  export let size;
+  export let weight = 'regular';
 </script>
 
-<div style={css`
-  height: ${$theme.space[size]};
+<div class={css`
+  height: 1px;
+  background-color: ${$theme.color.border[weight]};
 `}>
 </div>
