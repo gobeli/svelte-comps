@@ -7,12 +7,9 @@
 </script>
 
 <div class={css`
-  > * {
-    margin-bottom: ${$theme.space[space]};
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  display: grid;
+  grid-gap: ${$theme.space[space]};
+  grid-template-columns: 100%;
 `}>
   <slot></slot>
 </div>

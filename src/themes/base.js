@@ -5,6 +5,11 @@ export default {
       strong: '#303030'
     }
   },
+  breakpoint: {
+    mobile: 0,
+    tablet: 740,
+    desktop: 992,
+  },
   space: {
     xxsmall: '4px',
     xsmall: '8px',

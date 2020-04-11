@@ -1,11 +1,14 @@
 import { injectGlobal } from 'emotion';
 
 injectGlobal`
+  *, *:after, *:before {
+    box-sizing: border-box;
+  }
+
   article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, select, input {
     margin: 0;
     padding: 0;
     border: 0;
-    box-sizing: border-box;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
