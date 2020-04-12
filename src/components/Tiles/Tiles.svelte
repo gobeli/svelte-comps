@@ -1,19 +1,14 @@
 <script>
-  import { onMount } from 'svelte';
   import { css } from 'emotion';
   import { theme } from '../../util/theme';
-  import { map } from '../../util/breakpoint';
+  import { resolveResponsive } from '../../util/breakpoint';
 
-  $: breakpoints = columns.map((col, index) => {
-    const cols = [...Array(col)].map(col => '1fr').join(' ');
-    const min = $theme.breakpoint[map(index)];
-    console.log(col)
-    return `
-      @media (min-width: ${min}px) {
-        grid-template-columns: ${cols};
-      }
-    `;
-  }).join(' ');
+  
+  $: breakpoints = resolveResponsive(
+    columns
+      .map(cols => [...Array(cols)].map(col => '1fr').join(' '))
+      .map(col => `grid-template-columns: ${col}`)
+  );
 
   export let space = 'small', columns = [1, 1, 1];
 </script>
