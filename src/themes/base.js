@@ -5,6 +5,10 @@ export default {
       strong: '#303030'
     }
   },
+  contentWidth: {
+    medium: 940,
+    large: 1280,
+  }, 
   breakpoint: {
     mobile: 0,
     tablet: 740,
