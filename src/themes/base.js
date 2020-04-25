@@ -5,6 +5,15 @@ export default {
       strong: '#303030'
     }
   },
+  typography: {
+    fontFamily: '"Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif',
+    text: {
+      xsmall: 12,
+      small: 14,
+      standard: 16,
+      large: 18
+    }
+  },
   contentWidth: {
     medium: 940,
     large: 1280,

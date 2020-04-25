@@ -3,9 +3,9 @@
 
   import Image from './Image.svelte';
 
-  export let offset = 0;
+  export let offset = 0, src = 'https://source.unsplash.com/random/600x400', placeholder;
 </script>
 <div class={css`
   height: ${offset}px;
 `}></div>
-<Image alt="Test Image" src="https://source.unsplash.com/random/600x400" width="600px" height="400px" />
+<Image alt="Test Image" {src} {placeholder} width="600px" height="400px" />
