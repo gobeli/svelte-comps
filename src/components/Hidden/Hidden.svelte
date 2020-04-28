@@ -1,5 +1,5 @@
 <script>
-  import { css, merge } from 'emotion';
+  import { css } from 'emotion';
   import { resolveResponsive, resolveResponsiveRange } from '../../util/breakpoint';
 
   const displayCss = 'display: none;';

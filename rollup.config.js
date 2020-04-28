@@ -8,12 +8,17 @@ const name = pkg.name
 	.replace(/^\w/, m => m.toUpperCase())
 	.replace(/-\w/g, m => m[1].toUpperCase());
 
+const globals = {
+	emotion: 'emotion'
+}
+
 export default {
 	input: 'src/index.js',
 	output: [
-		{ file: pkg.module, 'format': 'es' },
-		{ file: pkg.main, 'format': 'umd', name }
+		{ file: pkg.module, 'format': 'es', globals },
+		{ file: pkg.main, 'format': 'umd', name, globals }
 	],
+	external: [ 'emotion' ],
 	plugins: [
 		svelte(),
 		resolve(),
